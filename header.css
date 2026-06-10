@@ -1,0 +1,158 @@
+.header {
+  height: 56px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+
+  /* SAMJHO: Isse header screen ke top par chipak jata hai, scroll karne par bhi nahi hiltah */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Taaki videos scroll hote waqt header ke upar na tairne lagein */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.youtube-logo {
+  height: 20px;
+  cursor: pointer;
+}
+
+.middle-section {
+  flex: 1;
+  max-width: 500px; /* Search bar ko ek hadd se zyada bada hone se rokne ke liye */
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 16px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  width: 0; /* Flexbox responsive behavior ke liye */
+}
+
+.search-button {
+  width: 64px;
+  height: 36px;
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative; /* Taaki tooltip ko iske upar absolute position kar sakein */
+}
+
+.search-button img {
+  height: 20px;
+}
+
+.icon-tooltip,
+.notification-icon-container,
+.search-button,
+.voice-search-button {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -28px;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 150ms ease, visibility 150ms ease;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.notification-icon-container:hover .tooltip,
+.icon-tooltip:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.voice-search-button {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f8f8f8;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.voice-search-button img {
+  height: 24px;
+}
+
+.right-section {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 24px;
+  flex-shrink: 0; /* Taaki right section apne content ke hisaab se shrink na ho, hamesha 180px rahe */
+}
+
+.right-section img {
+  height: 24px;
+  cursor: pointer;
+}
+.notification-icon-container {
+  position: relative; /* Taaki notification badge ko iske upar absolute position kar sakein */
+  display: inline-block;
+}
+.notification-count {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-family: 'roboto', arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 12px;
+}
+.current-user-picture {
+  height: 32px;
+  border-radius: 16px;
+}
+
+

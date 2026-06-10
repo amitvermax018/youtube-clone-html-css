@@ -1,0 +1,21 @@
+/* Sabhi elements ki extra margin aur padding hatane ke liye */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #f9f9f9;
+  
+  /* SAMJHO: Header top par fix hai aur Sidebar left me fix hai. 
+     Isliye content unke peeche na dabe, humne top aur left me space (padding) di hai. */
+  padding-top: 70px;  
+  padding-left: 96px; 
+  padding-right: 24px;
+}
+
+p {
+  margin: 0;
+}

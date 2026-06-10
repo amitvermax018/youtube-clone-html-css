@@ -1,0 +1,39 @@
+.sidebar {
+  /* SAMJHO: Position fixed karke humne ise left edge par chipka diya hai. 
+     top: 56px isliye taaki ye top header ke just niche se shuru ho. */
+  position: fixed;
+  left: 0;
+  top: 56px;
+  bottom: 0;
+  width: 72px;
+  background-color: white;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.sidebar-link {
+  height: 74px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background-color: #f5f5f5;
+}
+
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 6px;
+}
+
+.sidebar-link div {
+  font-size: 10px;
+}
